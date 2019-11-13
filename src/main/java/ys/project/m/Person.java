@@ -12,21 +12,32 @@ import java.util.Date;
 public class Person {
     @Id
     @GeneratedValue
-    @Column(name = "Id", nullable = false)
-    private Long id;
+    @Column(name = "Id")
+    private Integer id;
 
-    @Column(name = "Full_Name", length = 64, nullable = false)
+    @Column(name ="Role")
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    @Column(name = "Full_Name")
     private String fullName;
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "Date_Of_Order", nullable = false)
+    @Column(name = "Date_Of_Order")
     private Date dateOfOrder;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -44,5 +55,8 @@ public class Person {
 
     public void setDateOfOrder(Date dateOfOrder) {
         this.dateOfOrder = dateOfOrder;
+    }
+
+    public Person() {
     }
 }

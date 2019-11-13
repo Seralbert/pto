@@ -8,17 +8,14 @@ import ys.project.r.PersonRepo;
 
 /**
  * Created by User on 12.11.2019.
-
  */
-
 @Controller
-public class RequestController {
+public class PersonController {
     @Autowired
     private PersonRepo personDAO;
 
-    @RequestMapping("/")
-    public String main(Model model){
-        model.addAttribute("persons", personDAO.findAll());
-        return "request";
+    @RequestMapping("/addPerson")
+    public String addPerson(Model model){
+        return "addPerson";
     }
 }
