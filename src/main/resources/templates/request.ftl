@@ -230,7 +230,7 @@
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                     <div class="card-body">
-                        <a href="#" class="btn btn-success"><span class="oi oi-plus"></span>&nbspДобваить</a>
+                        <a href="/addPerson" class="btn btn-success"><span class="oi oi-plus"></span>&nbspДобваить</a>
                         <br><br>
 
                         <table class="table">
@@ -251,7 +251,7 @@
                                 <td>${persona.role}</td>
                                 <td>${persona.fullName}</td>
                                 <td><span class="oi oi-eye"></span></td>
-                                <td><span class="oi oi-x"></span></td>
+                                <td><a href="/delete/person/${persona.id}" > <span class="oi oi-x"></span></a></td>
                             </tr>
                             <#else>
                             <tr>
